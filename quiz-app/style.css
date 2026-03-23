@@ -1,0 +1,299 @@
+/* 全体のベース */    
+body {
+  font-family: "M PLUS Rounded 1c", "Yu Gothic Rounded", sans-serif;
+  background-color: #ffb9b9; /* 薄い赤色 */
+  margin: 0;
+  padding: 0;
+  color: #333;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; /* ページ全体で無効化 */
+}
+
+/* 中央のカード */
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* タイトル（main-titleに統一） */
+.main-title {
+  font-family: "M PLUS Rounded 1c", "Yu Gothic Rounded", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #444;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* タイトル画像 */
+.start-image {
+  display: block;
+  margin: 20px auto; /* ← 左右オートで中央寄せ */
+  max-width: 80%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* ロゴ画像 */
+.logo-image {
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 150px;
+  height: auto;
+}
+
+#logo {
+  display: none;
+}
+
+/* 質問文 */
+h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* スタートボタン */
+.start-btn {
+  background: #ffca28;
+  color: #333;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 50px;
+  font-family: "M PLUS Rounded 1c", "Yu Gothic Rounded", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+.start-btn:hover {
+  background: #ffc107;
+  transform: scale(1.05);
+}
+
+/* 共通ボタン */
+button {
+  background: #fffacd;
+  color: #333;
+  border: 2px solid #ffd700;
+  padding: 12px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "M PLUS Rounded 1c", "Yu Gothic Rounded", sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+/* ホバー */
+button:hover {
+  background: #ffec8b;
+  transform: translateY(-2px);
+}
+
+/* ← これ追加（スマホ用） */
+button:active {
+  transform: translateY(3px) scale(0.97);
+}
+
+/* フォーカス・アクティブ時（スマホ残像防止） */
+button:focus,
+button:focus-visible {
+  outline: none !important;
+}
+
+/* Safari・Chromeモバイルのゴーストタップ色を消す */
+button:visited {
+  background: #fffacd !important;
+  color: #333 !important;
+}
+
+/* 選択状態 */
+button.selected {
+  background-color: #ffd700;
+  color: #000;
+}
+
+/* ==== iPhoneの色残り対策（選択肢専用） ==== */
+.choice-btn,
+.choice-btn:focus,
+.choice-btn:active,
+.choice-btn:focus-visible,
+.choice-btn:visited {
+  background: #fffacd !important; /* 常に通常色 */
+  color: #333 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.choice-btn {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* 通常時は少し浮かせる */
+}
+
+.choice-btn:active {
+  transform: translateY(6px); /* 深く沈む */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* 押したら影を小さく */
+}
+
+/* 結果カード */
+.result-card {
+  border: 3px solid #ffd700;
+  border-radius: 15px;
+  background: #fff8dc;
+  padding: 25px;
+  margin-top: 25px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.result-card h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.result-card p {
+  font-size: 18px;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.result-image {
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.result-image {
+  transition: transform 0.2s ease;
+}
+
+.result-image:hover {
+  transform: scale(1.05);
+}
+
+.result-image:active {
+  transform: scale(0.97);
+}
+
+.result-link {
+  display: inline-block;
+  margin-top: 18px;
+  background: #ffca28;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+.result-link:hover {
+  background: #ffc107;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* スマホ向け */
+@media (max-width: 600px) {
+  .container {
+    max-width: 95%;
+    margin: 15px auto;
+    padding: 15px;
+  }
+
+  .main-title {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .start-image {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0 auto 10px;
+  }
+
+  .start-btn {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .logo-image {
+    max-width: 100px;
+    margin: 0 auto 10px;
+  }
+}
+
+.subtitle {
+  display: none;
+}
+
+/* ===== 追加（スコア表示用） ===== */
+.score-label {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-top: 20px;
+  font-weight: bold; /* ← これを追加 */
+}
+
+.score-main {
+  text-align: center;
+  font-size: 54px; /* 18pxの3倍 */
+  font-weight: bold;
+  color: #ff4d6d;
+  margin: 10px 0 20px;
+  animation: popIn 0.5s ease;
+  display: inline-block;
+
+  text-shadow: 0 3px 8px rgba(0,0,0,0.2); /* ← ここ追加 */
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
