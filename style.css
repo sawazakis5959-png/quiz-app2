@@ -103,7 +103,7 @@ button:hover {
 
 @media (hover: none) {
   button:hover {
-    transform: none;
+    transform: none !important;
   }
 }
 
