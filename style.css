@@ -101,9 +101,14 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* ← これ追加（スマホ用） */
+@media (hover: none) {
+  button:hover {
+    transform: none;
+  }
+}
+
 button:active {
-  transform: translateY(3px) scale(0.97);
+  transform: scale(0.95);
 }
 
 /* フォーカス・アクティブ時（スマホ残像防止） */
