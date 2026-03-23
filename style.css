@@ -146,8 +146,7 @@ button.selected {
 }
 
 .choice-btn:active {
-  transform: translateY(6px); /* 深く沈む */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* 押したら影を小さく */
+  transform: scale(0.95);
 }
 
 /* 結果カード */
