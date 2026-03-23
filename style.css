@@ -149,8 +149,12 @@ button.selected {
   transform: scale(0.95);
 }
 
-/* 結果カード */
+/* ==== 結果カード ==== */
 .result-card {
+  display: flex;            /* Flexbox化 */
+  flex-direction: column;   /* 縦並び */
+  align-items: center;      /* 子要素を中央揃え */
+  justify-content: center;  /* 上下中央 */
   border: 3px solid #ffd700;
   border-radius: 15px;
   background: #fff8dc;
@@ -179,9 +183,6 @@ button.selected {
   margin: 15px 0;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.result-image {
   transition: transform 0.2s ease;
 }
 
@@ -273,19 +274,18 @@ button.selected {
   font-size: 18px;
   color: #555;
   margin-top: 20px;
-  font-weight: bold; /* ← これを追加 */
+  font-weight: bold;
 }
 
 .score-main {
+  display: block;           /* ← inline-block → block に変更 */
+  margin: 10px auto 20px;   /* 上下マージン + 左右自動で中央寄せ */
   text-align: center;
-  font-size: 54px; /* 18pxの3倍 */
+  font-size: 54px;
   font-weight: bold;
   color: #ff4d6d;
-  margin: 10px 0 20px;
   animation: popIn 0.5s ease;
-  display: inline-block;
-
-  text-shadow: 0 3px 8px rgba(0,0,0,0.2); /* ← ここ追加 */
+  text-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
 @keyframes popIn {
