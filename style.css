@@ -33,7 +33,7 @@ body {
 /* タイトル画像 */
 .start-image {
   display: block;
-  margin: 20px auto; /* ← 左右オートで中央寄せ */
+  margin: 20px auto;
   max-width: 80%;
   height: auto;
   border-radius: 12px;
@@ -111,50 +111,42 @@ button:active {
  opacity: 0.8;
 }
 
-/* フォーカス・アクティブ時（スマホ残像防止） */
 button:focus,
 button:focus-visible {
   outline: none !important;
 }
 
-/* Safari・Chromeモバイルのゴーストタップ色を消す */
 button:visited {
   background: #fffacd !important;
   color: #333 !important;
 }
 
-/* 選択状態 */
 button.selected {
   background-color: #ffd700;
   color: #000;
 }
 
-/* ==== iPhoneの色残り対策（選択肢専用） ==== */
 .choice-btn,
 .choice-btn:focus,
 .choice-btn:active,
 .choice-btn:focus-visible,
 .choice-btn:visited {
-  background: #fffacd !important; /* 常に通常色 */
+  background: #fffacd !important;
   color: #333 !important;
   outline: none !important;
   box-shadow: none !important;
 }
 
 .choice-btn {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* 通常時は少し浮かせる */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
 .choice-btn:active {
   transform: scale(0.95);
 }
 
-/* ==== 結果カード ==== */
+/* 結果カード */
 .result-card {
-  display: flex;            /* Flexbox化 */
-  flex-direction: column;   /* 縦並び */
-  align-items: center;      /* 子要素を中央揃え */
-  justify-content: center;  /* 上下中央 */
   border: 3px solid #ffd700;
   border-radius: 15px;
   background: #fff8dc;
@@ -268,7 +260,7 @@ button.selected {
   display: none;
 }
 
-/* ===== 追加（スコア表示用） ===== */
+/* ===== スコア表示（ここだけ修正） ===== */
 .score-label {
   text-align: center;
   font-size: 18px;
@@ -278,12 +270,16 @@ button.selected {
 }
 
 .score-main {
-  display: block;           /* ← inline-block → block に変更 */
-  margin: 10px auto 20px;   /* 上下マージン + 左右自動で中央寄せ */
+  width: 100%;                  /* 追加 */
+  display: flex;                /* 変更（ここが本質） */
+  justify-content: center;      /* 横中央 */
+  align-items: center;          /* 縦中央 */
   text-align: center;
+
   font-size: 54px;
   font-weight: bold;
   color: #ff4d6d;
+  margin: 10px 0 20px;
   animation: popIn 0.5s ease;
   text-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
