@@ -270,16 +270,14 @@ button.selected {
 }
 
 .score-main {
-  width: 100%;                  /* 追加 */
-  display: flex;                /* 変更（ここが本質） */
-  justify-content: center;      /* 横中央 */
-  align-items: center;          /* 縦中央 */
+  display: block;
+  width: 100%;
   text-align: center;
+  margin: 10px 0 20px;
 
   font-size: 54px;
   font-weight: bold;
   color: #ff4d6d;
-  margin: 10px 0 20px;
   animation: popIn 0.5s ease;
   text-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
