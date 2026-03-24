@@ -1,83 +1,83 @@
 // ====== 質問文と選択肢 ====== 
 const questions = [
   {
-    question: "Q1. 衛生学的手洗いの注意すべきポイントは？",
+    question: "Q1. 心電図上で心房の興奮を示す波形は？",
     choices: [
-      { text: "指先、母指、手首まで洗う", score: 1 },
-      { text: "洗い終わったら自分のハンカチで手を拭く", score: 0 },
-      { text: "消毒液が乾く前にケアを始める", score: 0 }
+      { text: "P波", score: 1 },
+      { text: "QRS波", score: 0 },
+      { text: "T波", score: 0 }
     ]
   },
   {
-    question: "Q2. 注射器を扱うときに触ってはいけないのは？",
+    question: "Q2. 健常な成人の白血球の中で<br>最も数が多いのは？",
     choices: [
-      { text: "針管", score: 1 },
-      { text: "外筒", score: 0 },
-      { text: "内筒頭", score: 0 }
+      { text: "好中球", score: 1 },
+      { text: "好酸球", score: 0 },
+      { text: "リンパ球", score: 0 }
     ]
   },
   {
-    question: "Q3. 病室の環境整備として最適な湿度は？",
+    question: "Q3. 排便中枢があるのはどこ？",
     choices: [
-      { text: "50%", score: 1 },
-      { text: "30%", score: 0 },
-      { text: "70%", score: 0 }
+      { text: "仙髄", score: 1 },
+      { text: "腰髄", score: 0 },
+      { text: "脳幹", score: 0 }
     ]
   },
   {
-    question: "Q4. 脈拍測定を行うときに確認する動脈は？",
+    question: "Q4. 健常な成人の安静時の1回換気量は？",
     choices: [
-      { text: "橈骨動脈", score: 1 },
-      { text: "尺骨動脈", score: 0 },
-      { text: "上腕動脈", score: 0 }
+      { text: "約0.5L", score: 1 },
+      { text: "約1L", score: 0 },
+      { text: "約350ｍL", score: 0 }
     ]
   },
   {
-    question: "Q5. 体位変換で仰臥位から側臥位とするときに<br>支えるべき場所は？",
+    question: "Q5. 選択肢のうち、<br>下垂体から分泌されるホルモンはどれ？",
     choices: [
-      { text: "肩と膝", score: 1 },
-      { text: "肩と背中", score: 0 },
-      { text: "頭と膝", score: 0 }
+      { text: "オキシトシン", score: 1 },
+      { text: "グルカゴン", score: 0 },
+      { text: "メラトニン", score: 0 }
     ]
   },
   {
-    question: "Q6. 臥床患者さんがいるとき、<br>2人でシーツ交換を行う場合のポイントは？",
+    question: "Q6. 1日の尿量が<br>100mL以下の場合を何という？",
     choices: [
-      { text: "シーツは内巻きに丸める", score: 1 },
-      { text: "はじめに枕カバーを交換する", score: 0 },
-      { text: "患者さんの背面にベッド柵を設置する", score: 0 }
+      { text: "無尿", score: 1 },
+      { text: "乏尿", score: 0 },
+      { text: "尿閉", score: 0 }
     ]
   },
   {
-    question: "Q7. 清拭時に皮膚にあたるタオルの<br>適切な表面温度は次のうちどれ？",
+    question: "Q7. 二次卵母細胞と精子は通常どこで受精する？",
     choices: [
-      { text: "40～45℃", score: 1 },
-      { text: "50～55°C", score: 0 },
-      { text: "60～65℃", score: 0 }
+      { text: "卵管膨大部", score: 1 },
+      { text: "卵管采", score: 0 },
+      { text: "子宮体部", score: 0 }
     ]
   },
   {
-    question: "Q8. 患者さんの意識障害レベルを<br>評価する指標は？",
+    question: "Q8. 咀嚼筋を支配する神経はどれ？",
     choices: [
-      { text: "JCS", score: 1 },
-      { text: "NRS", score: 0 },
-      { text: "FIM", score: 0 }
+      { text: "三叉神経", score: 1 },
+      { text: "顔面神経", score: 0 },
+      { text: "舌咽神経", score: 0 }
     ]
   },
   {
-    question: "Q9. 血小板の数値が基準値を下回っているとき、<br>まず疑うべき症状は次のうちどれ？",
+    question: "Q9. 近くのものを見るとき、水晶体はどうなる？",
     choices: [
-      { text: "出血", score: 1 },
-      { text: "高血糖", score: 0 },
-      { text: "低栄養", score: 0 }
+      { text: "厚くなる", score: 1 },
+      { text: "薄くなる", score: 0 },
+      { text: "広がる", score: 0 }
     ]
   },
   {
-    question: "Q10. 食事介助をはじめるとき<br>誤嚥を防ぐためとるべき行動は？",
+    question: "Q10. 筋収縮時、フィラメントの長さはどうなる？",
     choices: [
-      { text: "患者さんに最初に水分摂取をしてもらう", score: 1 },
-      { text: "患者さんにエプロンを身に着けてもらう", score: 0 },
-      { text: "患者さんに頸部を後屈してもらう", score: 0 }
+      { text: "変わらない", score: 1 },
+      { text: "長くなる", score: 0 },
+      { text: "短くなる", score: 0 }
     ]
   }
 ];
@@ -152,19 +152,19 @@ resultEl.innerHTML = `
 
     <p class="score-label">あなたのスコアは</p>
 
-    <div class="score-main">
-      <span class="shine"></span>
-      ${score} / 10
-      
-  　<p class="score-label">＼プチナースで解剖生理を勉強してみる？／</p>
+  <div class="score-main">
+    <span class="score-text">${score} / 10</span>
+  </div>
 
+  <p class="score-label">
+  プチナースで<br>＼解剖生理を勉強しよう！／
+  </p>
     <a href="https://www.shorinsha.co.jp/book/b10159560.html" target="_blank">
       <img src="nezumi_b.png" alt="診断結果画像" class="result-image">
     </a>
-
     <a href="https://www.shorinsha.co.jp/book/b10159560.html" 
        class="result-link" target="_blank">
-      3ステップのくりかえしですいすい覚える！<br>解剖生理ワークブックをチェック✅
+      3ステップの<br>くりかえしですいすい覚える！<br>解剖生理ワークブックをチェック✅
     </a>
 
     <div id="result-share" style="margin-top: 20px; display:flex; justify-content:center; gap:20px;">
