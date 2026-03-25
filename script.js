@@ -97,6 +97,8 @@ const startImage = document.getElementById("startImage");
 startBtn.addEventListener("click", startQuiz);
 
 function startQuiz() {
+  document.getElementById("banner-area").style.display = "none";
+
   startBtn.style.display = "none";
   if (startImage) startImage.style.display = "none";
 
@@ -159,11 +161,11 @@ resultEl.innerHTML = `
   <p class="score-label">
   プチナースで<br>＼解剖生理を勉強しよう！／
   </p>
-    <a href="https://www.shorinsha.co.jp/book/b10159560.html" target="_blank">
-      <img src="nezumi_b.png" alt="診断結果画像" class="result-image">
+    <a href="https://www.shorinsha.co.jp/book/b10159560.html" target="_blank" rel="noopener noreferrer">
+      <img src="nezumi_b.png" alt="解剖生理ワークブックの紹介画像" class="result-image" width="500" height="500">
     </a>
     <a href="https://www.shorinsha.co.jp/book/b10159560.html" 
-       class="result-link" target="_blank">
+       class="result-link" target="_blank" rel="noopener noreferrer">
       3ステップの<br>くりかえしですいすい覚える！<br>解剖生理ワークブックをチェック✅
     </a>
 
@@ -175,6 +177,10 @@ resultEl.innerHTML = `
         <img src="images/line-logo.png" alt="LINEでシェア" style="width:44px; height:44px; background:#fff; padding:6px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.25);">
       </a>
     </div>
+
+    <p style="font-size:12px; color:#666; margin-top:20px;">
+    ※本サイトは外部サイトへのリンクを含みます。詳細はリンク先をご確認ください。
+    </p>
 
   </div>
 `;
