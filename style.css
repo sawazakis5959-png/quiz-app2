@@ -310,7 +310,7 @@ button.selected {
 
 @media (max-width: 480px) {
   #banner-area {
-    transform: scale(0.75);
+    transform: scale(0.68);
     transform-origin: top center;
   }
 
