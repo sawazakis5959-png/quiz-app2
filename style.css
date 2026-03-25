@@ -314,15 +314,4 @@ button.selected {
     transform-origin: top center;
   }
 
-  /* comingを下に落とす */
-  #banner-area img:nth-child(3) {
-    width: 100%;
-    margin-left: auto;
-  }
-
-  #banner-area img {
-    height: 80px;
-    width: auto;
-    max-width: 45%;
-  }
 }
