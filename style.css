@@ -299,3 +299,9 @@ button.selected {
     opacity: 1;
   }
 }
+
+@media (max-width: 480px) {
+  #banner-area img {
+    height: 80px;
+  }
+}
