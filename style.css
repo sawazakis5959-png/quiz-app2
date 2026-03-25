@@ -300,8 +300,28 @@ button.selected {
   }
 }
 
+#banner-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto 30px;
+}
+
 @media (max-width: 480px) {
+  #banner-area {
+    flex-wrap: wrap;
+  }
+
+  /* comingを下に落とす */
+  #banner-area img:nth-child(3) {
+    width: 100%;
+    margin-left: auto;
+  }
+
   #banner-area img {
     height: 80px;
+    width: auto;
+    max-width: 45%;
   }
 }
