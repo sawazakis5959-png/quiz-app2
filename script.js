@@ -179,7 +179,7 @@ resultEl.innerHTML = `
     </div>
 
     <p style="font-size:12px; color:#666; margin-top:20px;">
-    ※本サイトは外部サイトへのリンクを含みます。詳細はリンク先をご確認ください。
+    ※本サイトは外部サイトへのリンクを含みます。<br>詳細はリンク先をご確認ください。
     </p>
 
   </div>
