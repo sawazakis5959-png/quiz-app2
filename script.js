@@ -83,7 +83,7 @@ const questions = [
 ];
 
 // あなたのサイトURL
-const siteUrl = "https://petitnurse-quicknote-shindan.netlify.app/";
+const siteUrl = "https://petitnurse-kaibouseiri.netlify.app/";
 
 // ====== 状態変数 ======
 let currentQuestion = 0;
